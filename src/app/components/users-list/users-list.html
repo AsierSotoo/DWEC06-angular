@@ -1,0 +1,30 @@
+<h2>Listado de usuarios</h2>
+
+<input
+  type="text"
+  placeholder="Buscar por nombre o email..."
+  [(ngModel)]="searchTerm"
+  (input)="filterUsers()"
+  class="search-input"
+/>
+
+<ul *ngIf="filteredUsers.length > 0; else loading">
+  <li *ngFor="let user of filteredUsers">
+    <div class="user-info">
+      <strong>{{ user.name }}</strong>
+      <span class="email">{{ user.email }}</span>
+    </div>
+
+    <div class="actions">
+      <a [routerLink]="['/users', user.id]">Ver</a>
+      <a [routerLink]="['/users/edit', user.id]">Editar</a>
+      <button class="delete" (click)="deleteUser(user.id!)">
+        Eliminar
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ng-template #loading>
+  <p>Cargando usuarios...</p>
+</ng-template>

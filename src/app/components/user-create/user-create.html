@@ -1,0 +1,28 @@
+<div class="form-container">
+  <h1>Crear usuario</h1>
+  <p class="subtitle">Introduce los datos del nuevo usuario.</p>
+
+  <form (ngSubmit)="createUser()" #form="ngForm">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" name="name" [(ngModel)]="user.name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Usuario</label>
+      <input type="text" name="username" [(ngModel)]="user.username" required />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" [(ngModel)]="user.email" required />
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn primary" [disabled]="form.invalid">
+        Crear usuario
+      </button>
+      <a routerLink="/users" class="btn secondary">Cancelar</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,108 @@
+/* Contenedor general */
+:host {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* Buscador */
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 16px;
+  margin: 0 auto 25px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  display: block;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tarjeta de usuario */
+li {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+/* Información del usuario */
+.user-info strong {
+  display: block;
+  font-size: 16px;
+  color: #222;
+}
+
+.user-info small {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Acciones */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Enlaces y botones */
+.actions a,
+.actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Botones */
+.actions a {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.actions a:hover {
+  background-color: #bbdefb;
+}
+
+.actions button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.actions button.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* Loading */
+p {
+  color: #555;
+  font-size: 15px;
+}

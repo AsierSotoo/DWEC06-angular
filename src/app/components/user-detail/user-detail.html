@@ -1,0 +1,31 @@
+<div class="detail-container" *ngIf="user; else loading">
+  <h1>Detalle del usuario</h1>
+  <p class="subtitle">Información obtenida desde la API REST.</p>
+
+  <div class="card">
+    <div class="row">
+      <span class="label">Nombre</span>
+      <span class="value">{{ user.name }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Usuario</span>
+      <span class="value">{{ user.username }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Email</span>
+      <span class="value">{{ user.email }}</span>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <a routerLink="/users" class="btn secondary">Volver</a>
+    <a [routerLink]="['/users/edit', user.id]" class="btn primary">Editar</a>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="loading">Cargando usuario...</p>
+</ng-template>
